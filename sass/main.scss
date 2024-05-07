@@ -1,6 +1,4 @@
-@use './colors';
-@use './components';
-@use './mixins';
+@use './utilities/' as u;
 
 *,
 *::before,
@@ -11,9 +9,8 @@
 }
 
 html {
-    font-size: 62, 5%; //podstawowa wartość do REM oraz EM równa 10px//
-    scroll-behavior: smooth;
-
+	font-size: 62, 5%; //podstawowa wartość do REM oraz EM równa 10px//
+	scroll-behavior: smooth;
 }
 
 body {
@@ -52,11 +49,10 @@ body {
 		height: 30px;
 	}
 
-    &__bars,
+	&__bars,
 	&__bars::before,
 	&__bars::after {
-
-	 @include mixins.burgerBtn;
+		@include u.burgerBtn;
 	}
 
 	&__bars {
@@ -86,5 +82,6 @@ body {
 	padding: 2em;
 	height: 75vh;
 	text-align: center;
-	color: $pure-white;
+	color: u.$pure-white;
+    @include u.heroImages('../img/header-small.jpg');
 }
