@@ -108,13 +108,12 @@ body {
 			transition: transform 0.5s;
 			content: '';
 		}
-		
+
 		&:hover::before {
 			transform: scaleY(1);
 		}
 	}
 }
-
 
 @keyframes navItemsAnimation {
 	from {
@@ -126,7 +125,7 @@ body {
 	}
 }
 
-.nav-items-animation{
+.nav-items-animation {
 	animation: navItemsAnimation 1s both;
 }
 
@@ -171,7 +170,6 @@ body {
 		}
 	}
 }
-
 
 //Media
 
