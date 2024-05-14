@@ -16,6 +16,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
+	scroll-behavior: smooth;
 }
 
 //nav
@@ -213,6 +214,89 @@ body {
 
 	&__text {
 		padding: 1em 0;
+	}
+}
+
+//ISLANDS
+
+.islands {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: u.$pure-white;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.islands__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+
+			.islands__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+
+			&--first {
+				background-image: u.$light-blue-gradient, url(../img/Hawaje\ Palmy\ Staw.jpg);
+			}
+
+			&--second {
+				background-image: u.$blue-gradient, url(../img/Woda\ Podróż\ Ocean.jpg);
+			}
+
+			&--third {
+				background-image: u.$purple-gradient, url(../img/Łódź\ Wybrzeże\ Drzewo\ Palmowe.jpg);
+			}
+
+			&-title {
+				font-family: 'Dancing Script', cursive, serif;
+				font-size: 2.8rem;
+			}
+
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+
+				i {
+					margin-right: 3em;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-image: u.$light-blue-gradient-solid;
+			border-radius: 8px;
+
+			&-title {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+				top: 1.2em;
+				font-family: 'Dancing Script', cursive, serif;
+				font-size: 2.8rem;
+			}
+		}
 	}
 }
 
