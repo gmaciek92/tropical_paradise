@@ -13,3 +13,9 @@
     background-image: $blue-gradient, url($bgImg);
     background-size: cover;
 }
+
+@mixin islandsStyles {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}

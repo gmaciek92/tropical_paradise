@@ -223,7 +223,7 @@ body {
 	&__card {
 		position: relative;
 		margin: 1em 0;
-		height: 450px;
+		height: 650px;
 		color: u.$pure-white;
 		text-align: center;
 		perspective: 1000px;
@@ -260,7 +260,7 @@ body {
 			}
 
 			&-title {
-				font-family: 'Dancing Script', cursive, serif;
+				font-family: 'Dancing Script', cursive;
 				font-size: 2.8rem;
 			}
 
@@ -271,7 +271,7 @@ body {
 				font-size: 1.8rem;
 
 				i {
-					margin-right: 3em;
+					margin-right: 0.3em;
 				}
 			}
 		}
@@ -287,14 +287,46 @@ body {
 			justify-content: center;
 			background-image: u.$light-blue-gradient-solid;
 			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
 
 			&-title {
-				position: absolute;
-				left: 50%;
-				transform: translate(-50%);
+				@include u.islandsStyles;
 				top: 1.2em;
-				font-family: 'Dancing Script', cursive, serif;
+				font-family: 'Dancing Script', cursive;
 				font-size: 2.8rem;
+			}
+
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+
+				&-item {
+					padding: 1em;
+					font-size: 1.4rem;
+					border-bottom: 1px solid u.$light-white;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+
+			&-btn {
+				@include u.islandsStyles;
+				bottom: 2em;
+				padding: 1em;
+				border-radius: 8px;
+				width: 80%;
+				border: none;
+				background-color: u.$green-color;
+				cursor: pointer;
+
+				&:before {
+					background-color: u.$green-color-hover;
+				}
 			}
 		}
 	}
@@ -369,6 +401,19 @@ body {
 			font-size: 2.2rem;
 		}
 	}
+
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -423,6 +468,14 @@ body {
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.islands {
+		&__card {
+			width: 30%;
 		}
 	}
 }
