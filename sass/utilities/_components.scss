@@ -45,7 +45,7 @@
 		z-index: -1;
 	}
 
-	&:hover {
+	&:hover::before {
 		transform: scaleX(1);
 		transform-origin: left;
 	}
