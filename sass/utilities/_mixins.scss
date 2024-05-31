@@ -1,21 +1,29 @@
 @use './colors' as *;
 
 @mixin burgerBtn {
-    position: absolute;
+	position: absolute;
 	right: 0;
 	height: 3px;
-    content:'';
-    background-color: $pure-white;
-    transition: width .3s;
+	content: '';
+	background-color: $pure-white;
+	transition: width 0.3s;
 }
 
 @mixin heroImages($bgImg) {
-    background-image: $blue-gradient, url($bgImg);
-    background-size: cover;
+	background-image: $blue-gradient, url($bgImg);
+	background-size: cover;
 }
 
 @mixin islandsStyles {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+@mixin contactFrom {
+	margin-bottom: 2em;
+	padding: 0.6em;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.6rem;
 }
